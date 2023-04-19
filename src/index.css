@@ -1,3 +1,12 @@
+
+
+*{
+  box-sizing: border-box;
+}
+
+
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -47,7 +56,10 @@ code {
 .info--container{
   display: flex;
   background-color: white;
-  margin: 5em 4.5em;
+  /* margin: 5em 4.5em; */
+  width: 90%;
+  max-width: 1100px;
+  margin: 1em auto;
   border-radius: 30px;
   justify-content: space-between;
   padding: 30px;
@@ -78,7 +90,9 @@ code {
   display: flex;
   flex-wrap: wrap;
   background-color: white;
-  margin: 3em 5em ;
+  margin: 1em auto;
+  width: 90%;
+  max-width: 1100px;
   border-radius: 30px;
   justify-content: space-evenly;
   padding: 30px;
@@ -92,8 +106,8 @@ code {
 
 .cardslist{
   display: flex;
-  width: 80%;
-  margin: 0 auto;
+  width: 90%;
+  margin: 1em auto;
   justify-content: space-between;
 }
 
@@ -103,6 +117,7 @@ code {
   transition: all 0.5s ease-in;
   background-color: white;
   border-radius: 20px; 
+  height: 350px;
 }
 
 .back--card{
@@ -110,6 +125,7 @@ code {
   right: 0;
   display: none;
   padding: 1em;
+  height: 300px;
 }
 
 .card:hover{
@@ -118,6 +134,7 @@ code {
 
 .font-card img{
   border-radius: 20px; 
+  width: 100%;
 }
 
 .card:hover .back--card{
@@ -131,7 +148,10 @@ code {
 
  
  .digital--container{
-  margin: 5em 4.5em;
+  /* margin: 5em 4.5em; */
+  margin: 1em auto;
+  width: 90%;
+  max-width: 1100px;
   justify-content: center;
   text-align: center;
   color: white;
@@ -179,7 +199,10 @@ code {
 }
 
 .focusarea{
-  margin: 5em 4.5em;
+  /* margin: 5em 4.5em; */
+  margin: 1em auto;
+  width: 90%;
+  max-width: 1100px;
   background-color: white;
   justify-content: center;
   text-align: center;
@@ -187,12 +210,17 @@ code {
   border-radius: 25px;
 }
 .user--container{
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 90%;
   border-radius: 30px;
   justify-content: center;
   text-align: center;
 }
 .user-gif{
   border-radius: 30px;
+  width: 80%;
+  max-width: 400px;
 }
 .contact-us{
   background-color:rgb(144, 81, 202) ;
@@ -200,13 +228,16 @@ code {
   padding: 3em;
   color: white;
   display: flex;
-  margin: 2em 0em;
+  /* margin: 2em 0em; */
+  margin: 2em auto;
+  width: 100%;
+  max-width: 1100px;
   justify-content: space-between;
 }
 .s-icon{
   width: 25px;
   padding: 15px;
-  color: white;
+  color: rgb(247, 240, 240);
 }
 .s-links{
   margin-top: 1em;
@@ -227,6 +258,10 @@ code {
 body{
   background-color: rgb(196, 179, 107);
 }
+.nav--list{
+  display: none;
+}
+
 .info--container{
   display: block;
 }
@@ -287,15 +322,20 @@ body{
 }
 
 .cardslist{
-  width: 80%;
-  margin: 0 auto;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .card{
-  position: relative;
-  width: 40%;
-  margin: 1em;
+  width: 60%;
+  margin: 1em auto;
+  height: 280px;
 }
 
+}
+
+@media ( min-width:320px) and( max-width:562px){
+ 
+  .card{
+    height: 200px;
+  }
 }
