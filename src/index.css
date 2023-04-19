@@ -87,59 +87,54 @@ code {
 .settings-detail {
   padding: 20px;
 }
-.about{
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
- /* code about cards */
- .card--container{
-  position: absolute;
-  width:250px;
-  height: 320px;
+ 
+/* card code */
 
- }
- .card{
+.cardslist{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.card{
+  position: relative;
+  width: 23%;
+  transition: all 0.5s ease-in;
+  background-color: white;
+  border-radius: 20px; 
+}
+
+.back--card{
   position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: all 0.5s ease;
- }
- .card:hover{
-    transform: rotateY(180deg);
- }
- .back--card{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility:hidden;
-  background: #010c0f;
-  color: #e61414;
+  right: 0;
+  display: none;
+  padding: 1em;
+}
+
+.card:hover{
   transform: rotateY(180deg);
- }
- .front--card{
-  position: absolute;
-  width: 100%;
-  height: 1005;
-  backface-visibility:hidden;
-  background: #010c0f;
-  color: #e61414;
-  color: #333;
- }
- .card--container{
-  display: flex;
-  flex-direction: column;
- }
- .cardlist{
-  display: flex;
- }
+}
+
+.font-card img{
+  border-radius: 20px; 
+}
+
+.card:hover .back--card{
+  display: block;
+  transform: rotateY(180deg);
+}
+
+.card:hover .font-card img{
+  display: none;
+}
+
+ 
  .digital--container{
   margin: 5em 4.5em;
   justify-content: center;
   text-align: center;
   color: white;
-  
  }
  .digitalliteracy{
   display: flex;
@@ -224,6 +219,9 @@ code {
   margin-left: 2em;
 }
 
+.footer{
+  color: white;
+}
 
 @media screen and (max-width:750px){
 body{
@@ -288,5 +286,16 @@ body{
   background-color: rgb(151, 206, 206);
 }
 
+.cardslist{
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.card{
+  position: relative;
+  width: 40%;
+  margin: 1em;
+}
 
 }
